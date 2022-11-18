@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CloseOpen : MonoBehaviour
+public class Attack : MonoBehaviour
 {
     private Animator _animator;
-    private int i  = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,20 +14,12 @@ public class CloseOpen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown("l"))
         {
-            if(i % 2 == 0)
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Fold"))
             {
-                if (_animator != null)
-                {
-                    _animator.SetTrigger("Fold");
-                }
+                _animator.SetTrigger("Attack");
             }
-            else
-            {
-                _animator.SetTrigger("Unfold");
-            }
-            i++;
         }
     }
 }
