@@ -30,22 +30,22 @@ public class CameraControls : MonoBehaviour
         {
             this.transform.Translate(0, 0, -1 * speed * Time.deltaTime);
         }
-        if (Input.GetKey("r"))
-        {
-            this.transform.Translate(0, 1 * speed * Time.deltaTime, 0);
-        }
-        if (Input.GetKey("f"))
-        {
-            this.transform.Translate(0, -1 * speed * Time.deltaTime, 0);
-        }
+        // if (Input.GetKey("r"))
+        // {
+        //     this.transform.Translate(0, 1 * speed * Time.deltaTime, 0);
+        // }
+        // if (Input.GetKey("f"))
+        // {
+        //     this.transform.Translate(0, -1 * speed * Time.deltaTime, 0);
+        // }
 
-        if (Input.GetKey("q"))
-        {
-            this.transform.Rotate(0, -5 * speed * Time.deltaTime, 0);
-        }
-        if (Input.GetKey("e"))
-        {
-            this.transform.Rotate(0, 5 * speed * Time.deltaTime, 0);
-        }
+        // if (Input.GetKey("q"))
+        // {
+        //     this.transform.Rotate(0, -5 * speed * Time.deltaTime, 0);
+        // }
+        // if (Input.GetKey("e"))
+        // {
+        //     this.transform.Rotate(0, 5 * speed * Time.deltaTime, 0);
+        // }
     }
 }
