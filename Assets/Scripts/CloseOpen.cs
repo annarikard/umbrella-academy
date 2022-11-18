@@ -30,13 +30,18 @@ public class CloseOpen : MonoBehaviour
             {
                 _animator.SetTrigger("Fold");
             }
+
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Unfold"))
+            {
+                _animator.SetTrigger("Fold");
+            }
         }
 
         if (Input.GetKey("l"))
         {
             if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Fold"))
             {
-                Debug.Log("Hi");
+                _animator.SetTrigger("Unfold");
             }
         }
 
