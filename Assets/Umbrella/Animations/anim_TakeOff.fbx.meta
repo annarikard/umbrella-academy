@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: d77194fb817819240a5d9c309e42735a
+timeCreated: 1468221443
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: anim_global
+    100002: //RootNode
+    100004: joint_bottom
+    100006: joint_center
+    100008: joint_end01
+    100010: joint_end01 1
+    100012: joint_end01 2
+    100014: joint_end01 3
+    100016: joint_end01 4
+    100018: joint_end01 5
+    100020: joint_end01 6
+    100022: joint_end01 7
+    100024: joint_five01
+    100026: joint_five01 1
+    100028: joint_five01 2
+    100030: joint_five01 3
+    100032: joint_five01 4
+    100034: joint_five01 5
+    100036: joint_five01 6
+    100038: joint_five01 7
+    100040: joint_four01
+    100042: joint_four01 1
+    100044: joint_four01 2
+    100046: joint_four01 3
+    100048: joint_four01 4
+    100050: joint_four01 5
+    100052: joint_four01 6
+    100054: joint_four01 7
+    100056: joint_head
+    100058: joint_one01
+    100060: joint_one02
+    100062: joint_one03
+    100064: joint_one04
+    100066: joint_one05
+    100068: joint_one06
+    100070: joint_one07
+    100072: joint_one08
+    100074: joint_three01
+    100076: joint_three01 1
+    100078: joint_three01 2
+    100080: joint_three01 3
+    100082: joint_three01 4
+    100084: joint_three01 5
+    100086: joint_three01 6
+    100088: joint_three01 7
+    100090: joint_two01
+    100092: joint_two01 1
+    100094: joint_two01 2
+    100096: joint_two01 3
+    100098: joint_two01 4
+    100100: joint_two01 5
+    100102: joint_two01 6
+    100104: joint_two01 7
+    100106: mesh_pole_low
+    100108: mesh_wing_low
+    100110: Meshes_low
+    400000: anim_global
+    400002: //RootNode
+    400004: joint_bottom
+    400006: joint_center
+    400008: joint_end01
+    400010: joint_end01 1
+    400012: joint_end01 2
+    400014: joint_end01 3
+    400016: joint_end01 4
+    400018: joint_end01 5
+    400020: joint_end01 6
+    400022: joint_end01 7
+    400024: joint_five01
+    400026: joint_five01 1
+    400028: joint_five01 2
+    400030: joint_five01 3
+    400032: joint_five01 4
+    400034: joint_five01 5
+    400036: joint_five01 6
+    400038: joint_five01 7
+    400040: joint_four01
+    400042: joint_four01 1
+    400044: joint_four01 2
+    400046: joint_four01 3
+    400048: joint_four01 4
+    400050: joint_four01 5
+    400052: joint_four01 6
+    400054: joint_four01 7
+    400056: joint_head
+    400058: joint_one01
+    400060: joint_one02
+    400062: joint_one03
+    400064: joint_one04
+    400066: joint_one05
+    400068: joint_one06
+    400070: joint_one07
+    400072: joint_one08
+    400074: joint_three01
+    400076: joint_three01 1
+    400078: joint_three01 2
+    400080: joint_three01 3
+    400082: joint_three01 4
+    400084: joint_three01 5
+    400086: joint_three01 6
+    400088: joint_three01 7
+    400090: joint_two01
+    400092: joint_two01 1
+    400094: joint_two01 2
+    400096: joint_two01 3
+    400098: joint_two01 4
+    400100: joint_two01 5
+    400102: joint_two01 6
+    400104: joint_two01 7
+    400106: mesh_pole_low
+    400108: mesh_wing_low
+    400110: Meshes_low
+    4300000: mesh_pole_low
+    4300002: mesh_wing_low
+    7400000: TakeOff
+    9500000: //RootNode
+    13700000: mesh_pole_low
+    13700002: mesh_wing_low
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: TakeOff
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: anim_global
+        weight: 1
+      - path: anim_global/joint_bottom
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_head
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one01
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one01/joint_two01
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one01/joint_two01/joint_three01
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one01/joint_two01/joint_three01/joint_four01
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one01/joint_two01/joint_three01/joint_four01/joint_five01
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one01/joint_two01/joint_three01/joint_four01/joint_five01/joint_end01
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one02
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one02/joint_two01 1
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one02/joint_two01 1/joint_three01
+          1
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one02/joint_two01 1/joint_three01
+          1/joint_four01 1
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one02/joint_two01 1/joint_three01
+          1/joint_four01 1/joint_five01 1
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one02/joint_two01 1/joint_three01
+          1/joint_four01 1/joint_five01 1/joint_end01 1
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one03
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one03/joint_two01 2
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one03/joint_two01 2/joint_three01
+          2
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one03/joint_two01 2/joint_three01
+          2/joint_four01 2
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one03/joint_two01 2/joint_three01
+          2/joint_four01 2/joint_five01 2
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one03/joint_two01 2/joint_three01
+          2/joint_four01 2/joint_five01 2/joint_end01 2
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one04
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one04/joint_two01 3
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one04/joint_two01 3/joint_three01
+          3
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one04/joint_two01 3/joint_three01
+          3/joint_four01 3
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one04/joint_two01 3/joint_three01
+          3/joint_four01 3/joint_five01 3
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one04/joint_two01 3/joint_three01
+          3/joint_four01 3/joint_five01 3/joint_end01 3
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one05
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one05/joint_two01 4
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one05/joint_two01 4/joint_three01
+          4
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one05/joint_two01 4/joint_three01
+          4/joint_four01 4
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one05/joint_two01 4/joint_three01
+          4/joint_four01 4/joint_five01 4
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one05/joint_two01 4/joint_three01
+          4/joint_four01 4/joint_five01 4/joint_end01 4
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one06
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one06/joint_two01 5
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one06/joint_two01 5/joint_three01
+          5
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one06/joint_two01 5/joint_three01
+          5/joint_four01 5
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one06/joint_two01 5/joint_three01
+          5/joint_four01 5/joint_five01 5
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one06/joint_two01 5/joint_three01
+          5/joint_four01 5/joint_five01 5/joint_end01 5
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one07
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one07/joint_two01 6
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one07/joint_two01 6/joint_three01
+          6
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one07/joint_two01 6/joint_three01
+          6/joint_four01 6
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one07/joint_two01 6/joint_three01
+          6/joint_four01 6/joint_five01 6
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one07/joint_two01 6/joint_three01
+          6/joint_four01 6/joint_five01 6/joint_end01 6
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one08
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one08/joint_two01 7
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one08/joint_two01 7/joint_three01
+          7
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one08/joint_two01 7/joint_three01
+          7/joint_four01 7
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one08/joint_two01 7/joint_three01
+          7/joint_four01 7/joint_five01 7
+        weight: 1
+      - path: anim_global/joint_bottom/joint_center/joint_one08/joint_two01 7/joint_three01
+          7/joint_four01 7/joint_five01 7/joint_end01 7
+        weight: 1
+      - path: Meshes_low
+        weight: 1
+      - path: Meshes_low/mesh_pole_low
+        weight: 1
+      - path: Meshes_low/mesh_wing_low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: anim_global
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 811c68647618b6b448caa0d5e5ba40c5,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

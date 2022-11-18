@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: a9819e6846744424faa883ec2f7056c5
+timeCreated: 1468401472
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: anim_global
+    100002: joint_bottom
+    100004: joint_center
+    100006: joint_end01
+    100008: joint_end01 1
+    100010: joint_end01 2
+    100012: joint_end01 3
+    100014: joint_end01 4
+    100016: joint_end01 5
+    100018: joint_end01 6
+    100020: joint_end01 7
+    100022: joint_five01
+    100024: joint_five01 1
+    100026: joint_five01 2
+    100028: joint_five01 3
+    100030: joint_five01 4
+    100032: joint_five01 5
+    100034: joint_five01 6
+    100036: joint_five01 7
+    100038: joint_four01
+    100040: joint_four01 1
+    100042: joint_four01 2
+    100044: joint_four01 3
+    100046: joint_four01 4
+    100048: joint_four01 5
+    100050: joint_four01 6
+    100052: joint_four01 7
+    100054: joint_head
+    100056: joint_one01
+    100058: joint_one02
+    100060: joint_one03
+    100062: joint_one04
+    100064: joint_one05
+    100066: joint_one06
+    100068: joint_one07
+    100070: joint_one08
+    100072: joint_three01
+    100074: joint_three01 1
+    100076: joint_three01 2
+    100078: joint_three01 3
+    100080: joint_three01 4
+    100082: joint_three01 5
+    100084: joint_three01 6
+    100086: joint_three01 7
+    100088: joint_two01
+    100090: joint_two01 1
+    100092: joint_two01 2
+    100094: joint_two01 3
+    100096: joint_two01 4
+    100098: joint_two01 5
+    100100: joint_two01 6
+    100102: joint_two01 7
+    100104: mesh_pole_low
+    100106: //RootNode
+    100108: mesh_wing_low
+    100110: Meshes_low
+    400000: anim_global
+    400002: joint_bottom
+    400004: joint_center
+    400006: joint_end01
+    400008: joint_end01 1
+    400010: joint_end01 2
+    400012: joint_end01 3
+    400014: joint_end01 4
+    400016: joint_end01 5
+    400018: joint_end01 6
+    400020: joint_end01 7
+    400022: joint_five01
+    400024: joint_five01 1
+    400026: joint_five01 2
+    400028: joint_five01 3
+    400030: joint_five01 4
+    400032: joint_five01 5
+    400034: joint_five01 6
+    400036: joint_five01 7
+    400038: joint_four01
+    400040: joint_four01 1
+    400042: joint_four01 2
+    400044: joint_four01 3
+    400046: joint_four01 4
+    400048: joint_four01 5
+    400050: joint_four01 6
+    400052: joint_four01 7
+    400054: joint_head
+    400056: joint_one01
+    400058: joint_one02
+    400060: joint_one03
+    400062: joint_one04
+    400064: joint_one05
+    400066: joint_one06
+    400068: joint_one07
+    400070: joint_one08
+    400072: joint_three01
+    400074: joint_three01 1
+    400076: joint_three01 2
+    400078: joint_three01 3
+    400080: joint_three01 4
+    400082: joint_three01 5
+    400084: joint_three01 6
+    400086: joint_three01 7
+    400088: joint_two01
+    400090: joint_two01 1
+    400092: joint_two01 2
+    400094: joint_two01 3
+    400096: joint_two01 4
+    400098: joint_two01 5
+    400100: joint_two01 6
+    400102: joint_two01 7
+    400104: mesh_pole_low
+    400106: //RootNode
+    400108: mesh_wing_low
+    400110: Meshes_low
+    4300000: mesh_wing_low
+    4300002: mesh_pole_low
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: mesh_pole_low
+    13700002: mesh_wing_low
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: anim_global
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
