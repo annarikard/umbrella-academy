@@ -5,6 +5,7 @@ using UnityEngine;
 public class CloseOpen : MonoBehaviour
 {
     private Animator _animator;
+    private int i  = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,36 +16,22 @@ public class CloseOpen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.Space)){
-            //Swap the umbrella for closed one
-            //May be done by having both versions and hiding/showing the neccessary one
-            Debug.Log("henlo");
-        }
-        */
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("space");
-
-            if(_animator != null)
+            if(i % 2 == 0)
             {
-                _animator.SetTrigger("Fold");
-            }
+                Debug.Log("space");
 
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Unfold"))
-            {
-                _animator.SetTrigger("Fold");
+                if (_animator != null)
+                {
+                    _animator.SetTrigger("Fold");
+                }
             }
-        }
-
-        if (Input.GetKey("l"))
-        {
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Fold"))
+            else
             {
                 _animator.SetTrigger("Unfold");
             }
+            i++;
         }
-
-        
     }
 }
