@@ -28,7 +28,7 @@ public class CameraRotation : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Cursor.lockState);
+        //Debug.Log(Cursor.lockState);
         //Press the space bar to apply no locking to the Cursor
         // Debug stff (YEET this later)
         if (Input.GetKey(KeyCode.Escape))
