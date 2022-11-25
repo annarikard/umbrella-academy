@@ -106,6 +106,7 @@ Temporary Items
 **/.idea/shelf/*
 **/.idea/dictionaries
 **/.idea/httpRequests/
+Assets/Scripts/.idea/
 
 # Sensitive or high-churn files
 **/.idea/**/dataSources/
