@@ -43,10 +43,14 @@ public class CameraRotation : MonoBehaviour
 
         camRotation.x -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
         camRotation.y -= Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime * -1f;
+        
+        
         // camRotation.x = Mathf.Clamp(camRotation.x, -180f, 180f);
         // camRotation.y = Mathf.Clamp(camRotation.y, -180f, 180f);
 
 
         cam.localEulerAngles = camRotation;
+        
+        
     }
 }
