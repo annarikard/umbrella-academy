@@ -24,7 +24,6 @@ public class Attack : MonoBehaviour
 
                 Quaternion quaternion = Quaternion.identity;
                 quaternion.Set(transform.rotation.x, transform.rotation.y, transform.rotation.y, quaternion.w);
-
                 Instantiate(bullet, transform.position, quaternion);
             }
         }
