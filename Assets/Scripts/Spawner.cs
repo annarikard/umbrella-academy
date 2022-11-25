@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         timeRemaining = timeInterval;
-        playerPosition = GameObject.Find("Main Camera").transform.position;
+        playerPosition = GameObject.Find("Character").transform.position;
 
         Spawn();
     }
@@ -38,24 +38,15 @@ public class Spawner : MonoBehaviour
     // Create a new mob in the distance and rotate towards the player
     void Spawn(){
         float randomAngle = Random.Range(0f, 2f*Mathf.PI);
-        Debug.Log(randomAngle);
         Vector3 newPosition = CalculateMobPosition(randomAngle);
 
         GameObject newMob = Instantiate(mob, newPosition, Quaternion.identity);
         newMob.transform.LookAt(playerPosition);
         
         var animator = newMob.GetComponent<Animator>();
-        animator.SetBool("Walk", false);
-        animator.SetBool("SprintJump", true);
-        animator.SetBool("SprintSlide", false);
-        
-        // newMob.AddComponent<Animation>();
-        // var clips = Resources.Load("Assets/BasicBandit/DemoSceneBasicBandit/AnimationsDemoscene/SprintJump_ToLeft_R.fbx");
-        // AminationClip[] animation = AnimationUtility.GetAnimationClips(clips);
-        // newMob.GetComponent<Animation>().AddClip(animation[0], "run");
-        //newMob.GetComponent<Animation>().Play("SprintJump_ToLeft_R");
-        //newMob.animation["SprintJump_ToLeft_R"];
-        //SprintJump_ToLeft_R.fbx
+		animator.SetBool ("Walk", false);
+		animator.SetBool ("SprintJump", false);
+		animator.SetBool ("SprintSlide", false);
 
     }
 
@@ -65,11 +56,8 @@ public class Spawner : MonoBehaviour
             // This is not implemented
             return new Vector3(10, 10, 10);
         } else {
-            Vector3 test = new Vector3(distance * Mathf.Cos(angle) + playerPosition.x, playerPosition.y - 1, distance * Mathf.Sin(angle) + playerPosition.z);
-            Debug.Log("X: " + test.x + " " + "Z: " + test.z);
-            return test;
+            return new Vector3(distance * Mathf.Cos(angle) + playerPosition.x, playerPosition.y - 1, distance * Mathf.Sin(angle) + playerPosition.z);
         }
-        //Vector3 newPosition = new Vector3();
 
     }
 }
