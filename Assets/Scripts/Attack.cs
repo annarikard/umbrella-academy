@@ -7,6 +7,8 @@ public class Attack : MonoBehaviour
     private Animator _animator;
     public GameObject bullet;
 
+    public bool wasAttacking;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +30,11 @@ public class Attack : MonoBehaviour
                 Instantiate(bullet, transform.position, quaternion);
             }
         }
+    }
+
+    bool isAttackOver(){
+
+        return false;
+
     }
 }
