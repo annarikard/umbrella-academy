@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984904789}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd0a8d0412e414f57939404fb1fcae49, type: 3}
   m_Name: 
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1dba679b267fc41afedfddafa76ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mob: {fileID: 7682445201497104382, guid: 217ebcd1464a04e64a236ec6bfb77684, type: 3}
+  mob: {fileID: 1000014232435074, guid: 0a36d45e1b007e14b884de828f3b6938, type: 3}
   distance: 5
   timeInterval: 1
 --- !u!1001 &2128953062
@@ -918,11 +918,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 460250, guid: 440577244306b194bbf962a5e381a44c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.037103
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 460250, guid: 440577244306b194bbf962a5e381a44c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.020557
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 460250, guid: 440577244306b194bbf962a5e381a44c, type: 3}
       propertyPath: m_LocalPosition.x
