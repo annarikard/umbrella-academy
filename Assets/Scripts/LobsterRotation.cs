@@ -17,7 +17,7 @@ public class LobsterRotation : MonoBehaviour
     void Start()
     {
         timeElapsed = 0;
-        speed = 0.1f;
+        speed = 0.8f;
         cam = Camera.main.transform;
         transform.rotation = cam.rotation;
     }
