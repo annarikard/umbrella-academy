@@ -510,6 +510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011046732876}
+  - component: {fileID: 7233030334382885563}
   m_Layer: 0
   m_Name: IndexMiddle.L
   m_TagString: Untagged
@@ -533,6 +534,20 @@ Transform:
   m_Father: {fileID: 4000010015996532}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7233030334382885563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010506966028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200ff60f998c74b3698226d169731db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1000011831654914, guid: 424570faa59c41248b97fd39edf5d414, type: 3}
+  attacking: 0
 --- !u!1 &1000010538369374
 GameObject:
   m_ObjectHideFlags: 0

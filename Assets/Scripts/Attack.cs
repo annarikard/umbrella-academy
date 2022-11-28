@@ -7,7 +7,6 @@ public class Attack : MonoBehaviour
 {
     private Animator _animator;
     public GameObject bullet;
-
     public bool attacking = false;
 
     // Start is called before the first frame update
