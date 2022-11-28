@@ -5,7 +5,7 @@ using UnityEditor;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject[] enemies;
+
     public GameObject mob;
     public float distance;
     public float timeInterval;
@@ -20,24 +20,23 @@ public class Spawner : MonoBehaviour
         playerPosition = GameObject.Find("Main Camera").transform.position;
 
         Spawn();
-
-        enemies = GameObject.FindGameObjectsWithTag("BasicBandido");
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (timeRemaining <= 0){
             timeRemaining = timeInterval;
             Spawn();
         }        
 
         timeRemaining -= Time.deltaTime;
+
     }
 
     // Create a new mob in the distance and rotate towards the player
     void Spawn(){
-<<<<<<< Updated upstream
         float randomAngle = Random.Range(0f, 2f*Mathf.PI);
         Debug.Log(randomAngle);
         Vector3 newPosition = CalculateMobPosition(randomAngle);
@@ -57,22 +56,7 @@ public class Spawner : MonoBehaviour
         //newMob.GetComponent<Animation>().Play("SprintJump_ToLeft_R");
         //newMob.animation["SprintJump_ToLeft_R"];
         //SprintJump_ToLeft_R.fbx
-=======
-        enemies = GameObject.FindGameObjectsWithTag("BasicBandido");
-        if (enemies.Length < 4)
-        {
-            float randomAngle = Random.Range(0f, 2f * Mathf.PI);
-            Vector3 newPosition = CalculateMobPosition(randomAngle);
 
-            GameObject newMob = Instantiate(mob, newPosition, Quaternion.identity);
-            newMob.transform.LookAt(playerPosition);
->>>>>>> Stashed changes
-
-            var animator = newMob.GetComponent<Animator>();
-            animator.SetBool("Walk", false);
-            animator.SetBool("SprintJump", false);
-            animator.SetBool("SprintSlide", false);
-        }
     }
 
     Vector3 CalculateMobPosition(float angle, bool isSphere = false){
