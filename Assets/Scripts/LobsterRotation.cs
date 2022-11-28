@@ -5,7 +5,6 @@ using UnityEngine;
 public class LobsterRotation : MonoBehaviour
 {
 
-    private GameObject lobster;
     private Transform cam;
     public float speed;
     private float timeElapsed;
@@ -17,7 +16,7 @@ public class LobsterRotation : MonoBehaviour
     void Start()
     {
         timeElapsed = 0;
-        speed = 0.8f;
+        speed = 5f;
         cam = Camera.main.transform;
         transform.rotation = cam.rotation;
     }
@@ -29,5 +28,17 @@ public class LobsterRotation : MonoBehaviour
         transform.Rotate(new Vector3(0*timeElapsed, 0, 3*timeElapsed));
         timeElapsed += Time.deltaTime;
 
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.tag == "BasicBandido")
+        {
+            Debug.Log("FOUND BANDIT");
+            //If the GameObject's name matches the one you suggest, output this message in the console
+            Destroy(collision.gameObject);
+            Destroy(this);
+        }
     }
 }

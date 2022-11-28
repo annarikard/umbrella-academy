@@ -2809,7 +2809,7 @@ GameObject:
   - component: {fileID: 5210172570170015836}
   m_Layer: 0
   m_Name: Bandit
-  m_TagString: Untagged
+  m_TagString: BasicBandido
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

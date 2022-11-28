@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 321262132262662880}
   - component: {fileID: 4769107068110128529}
   - component: {fileID: 8995229425818955054}
+  - component: {fileID: -2645354380836524218}
   m_Layer: 0
   m_Name: lobster_01
   m_TagString: Untagged
@@ -163,6 +164,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2feb349315b84e6385208a213b4e45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+--- !u!136 &-2645354380836524218
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098467751342418010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3568676
+  m_Height: 0.75019485
+  m_Direction: 1
+  m_Center: {x: -0.026229173, y: 0, z: 0.019020624}
 --- !u!1 &1726409393630945570
 GameObject:
   m_ObjectHideFlags: 0
