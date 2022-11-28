@@ -17,16 +17,20 @@ public class CloseOpen : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+
+            UmbrellaCollisionHandler umbrellaCollisionHandler = (UmbrellaCollisionHandler) GetComponent("UmbrellaCollisionHandler");
             if(i % 2 == 0)
             {
                 if (_animator != null)
                 {
                     _animator.SetTrigger("Fold");
+                    umbrellaCollisionHandler.isFolded = true;
                 }
             }
             else
             {
                 _animator.SetTrigger("Unfold");
+                umbrellaCollisionHandler.isFolded = false;
             }
             i++;
         }
