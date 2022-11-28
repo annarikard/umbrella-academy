@@ -27,9 +27,7 @@ public class Attack : MonoBehaviour
 
                 _animator.SetTrigger("Attack");
 
-                UnityEngine.Quaternion quaternion = UnityEngine.Quaternion.identity;
-                quaternion.Set(transform.rotation.x, transform.rotation.y, transform.rotation.y, quaternion.w);
-                StartCoroutine(waiter(quaternion));
+                StartCoroutine(SpawnBullet());
                 
             }
         }
@@ -41,10 +39,18 @@ public class Attack : MonoBehaviour
 
     }
 
-    IEnumerator waiter(UnityEngine.Quaternion quaternion)
+    IEnumerator SpawnBullet()
     {
+
+        GameObject bulletSpawner = GameObject.Find("BulletSpawner");
+
+
+        UnityEngine.Quaternion newRotation = UnityEngine.Quaternion.identity;
+        newRotation.Set(bulletSpawner.transform.rotation.x, bulletSpawner.transform.rotation.y, bulletSpawner.transform.rotation.y, newRotation.w);
+
+        // Swith to events rather than a hard-coded time value
         yield return new WaitForSeconds(1.2f);
-        Instantiate(bullet, transform.position, quaternion);
+        Instantiate(bullet, bulletSpawner.transform.position, newRotation);
         attackOver();
     }
 }
