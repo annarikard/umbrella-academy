@@ -26,10 +26,7 @@ public class UmbrellaCollisionHandler : MonoBehaviour
             {
                 Destroy(collision.gameObject);
             }
-            else
-            {
-                Debug.Log("YOU LOSE BIAAATCH");
-            }
+
         }
     }
 }

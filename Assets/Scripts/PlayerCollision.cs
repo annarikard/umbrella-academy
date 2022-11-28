@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -18,9 +19,12 @@ public class PlayerCollision : MonoBehaviour
     
     void OnCollisionEnter(Collision collision)
     {
+
+        //Debug.Log("Hola");
+
         if (collision.gameObject.tag == "Bullet")
         {
-            Debug.Log("YOU LOSE BIAAATCH");
+            SceneManager.LoadScene("death");
         }
     }
 }
