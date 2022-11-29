@@ -7,11 +7,12 @@ public class Attack : MonoBehaviour
 {
     private Animator _animator;
     public GameObject bullet;
-    public bool attacking = false;
+    public bool attacking;
 
     // Start is called before the first frame update
     void Start()
     {
+        attacking = false;
         _animator = gameObject.GetComponent<Animator>();
     }
 
@@ -32,15 +33,10 @@ public class Attack : MonoBehaviour
         }
     }
 
-    void attackOver(){
-
-        attacking = false;
-
-    }
-
     IEnumerator SpawnBullet()
     {
 
+        Debug.Log("i spawn lobster in umbrella");
         GameObject bulletSpawner = GameObject.Find("BulletSpawner");
 
 
@@ -50,6 +46,6 @@ public class Attack : MonoBehaviour
         // Swith to events rather than a hard-coded time value
         yield return new WaitForSeconds(1.2f);
         Instantiate(bullet, bulletSpawner.transform.position, newRotation);
-        attackOver();
+        attacking = false;
     }
 }

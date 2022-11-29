@@ -15,11 +15,11 @@ public class UmbrellaCollisionHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
     
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("hukko");
         if (collision.gameObject.tag == "Bullet")
         {
             if (!isFolded)

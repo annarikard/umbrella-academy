@@ -19,9 +19,7 @@ public class PlayerCollision : MonoBehaviour
     
     void OnCollisionEnter(Collision collision)
     {
-
-        //Debug.Log("Hola");
-
+        Debug.Log("i am hurt");
         if (collision.gameObject.tag == "Bullet")
         {
             SceneManager.LoadScene("death");

@@ -23,6 +23,7 @@ public class LobsterRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log("i spawn lobster in lobster");
         transform.Translate(new Vector3(0, 0, 1)*Time.deltaTime*speed);
         transform.Rotate(new Vector3(0*timeElapsed, 0, 3*timeElapsed));
         timeElapsed += Time.deltaTime;
@@ -38,6 +39,7 @@ public class LobsterRotation : MonoBehaviour
         {
             //If the GameObject's name matches the one you suggest, output this message in the console
 
+            Debug.Log("explosion wow");
             GameObject tempExplosion = Instantiate(explosion, collision.gameObject.transform.position, Quaternion.identity);
 
             // The second parameter corresponds to playback time of the explosion effect
