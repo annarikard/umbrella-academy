@@ -6,10 +6,10 @@ public class BanditBulletScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
+    public float lifetime;
     private float timeElapsed;
     void Start()
     {
-        speed = 0.8f;   
         timeElapsed = 0;
     }
 
@@ -18,6 +18,6 @@ public class BanditBulletScript : MonoBehaviour
     {
         timeElapsed += Time.deltaTime; 
         transform.Translate(new Vector3(0, 1, 0)*Time.deltaTime*speed);
-        if (timeElapsed > 10) Destroy(this.gameObject);
+        if (timeElapsed > lifetime) Destroy(this.gameObject);
     }
 }

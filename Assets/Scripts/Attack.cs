@@ -8,12 +8,18 @@ public class Attack : MonoBehaviour
     private Animator _animator;
     public GameObject bullet;
     public bool attacking;
+    public float attackSpeedModifier;
+    // Completely arbitrary, must be set to 1.2/attackSpeedModifier
+    private float attackSpeedSeconds;
 
     // Start is called before the first frame update
     void Start()
     {
         attacking = false;
         _animator = gameObject.GetComponent<Animator>();
+        _animator.speed = attackSpeedModifier;
+
+        attackSpeedSeconds = 1.2f/attackSpeedModifier;
     }
 
     // Update is called once per frame
@@ -44,7 +50,7 @@ public class Attack : MonoBehaviour
         newRotation.Set(bulletSpawner.transform.rotation.x, bulletSpawner.transform.rotation.y, bulletSpawner.transform.rotation.y, newRotation.w);
 
         // Swith to events rather than a hard-coded time value
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(attackSpeedSeconds);
         Instantiate(bullet, bulletSpawner.transform.position, newRotation);
         attacking = false;
     }

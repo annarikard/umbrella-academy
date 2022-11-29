@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1098467751342418010, guid: 289e50df846e06e4fbf79dcfd93074f5, type: 3}
   attacking: 0
+  attackSpeedModifier: 2
 --- !u!114 &230978930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1030,6 +1031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1dba679b267fc41afedfddafa76ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemies: []
   mob: {fileID: 1000014232435074, guid: 0a36d45e1b007e14b884de828f3b6938, type: 3}
   distance: 10
   timeInterval: 15
