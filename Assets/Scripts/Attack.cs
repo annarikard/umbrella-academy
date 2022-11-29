@@ -42,7 +42,6 @@ public class Attack : MonoBehaviour
     IEnumerator SpawnBullet()
     {
 
-        Debug.Log("i spawn lobster in umbrella");
         GameObject bulletSpawner = GameObject.Find("BulletSpawner");
 
 

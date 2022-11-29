@@ -1032,9 +1032,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
-  mob: {fileID: 1000014232435074, guid: 0a36d45e1b007e14b884de828f3b6938, type: 3}
+  mob: {fileID: 5055320135424651843, guid: 15a86e6e1b87b8c4483fca4038a1078c, type: 3}
   distance: 10
   timeInterval: 5
+  maxEnemies: 3
 --- !u!114 &1984904795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,6 +1048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1a85daccc4744bb80b960be4342fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immortal: 0
 --- !u!136 &1984904796
 CapsuleCollider:
   m_ObjectHideFlags: 0

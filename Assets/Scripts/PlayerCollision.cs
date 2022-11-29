@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerCollision : MonoBehaviour
 {
+    public bool immortal;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +22,7 @@ public class PlayerCollision : MonoBehaviour
     
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("i am hurt");
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet" && !immortal)
         {
             SceneManager.LoadScene("death");
         }

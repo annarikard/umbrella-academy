@@ -9,6 +9,7 @@ public class Spawner : MonoBehaviour
     public GameObject mob;
     public float distance;
     public float timeInterval;
+    public int maxEnemies;
 
     private float timeRemaining;
     private Vector3 playerPosition;
@@ -39,7 +40,7 @@ public class Spawner : MonoBehaviour
     void Spawn(){
         enemies = GameObject.FindGameObjectsWithTag("BasicBandido");
 
-        if(enemies.Length < 4)
+        if(enemies.Length < maxEnemies)
         {
             float randomAngle = Random.Range(0f, 2f * Mathf.PI);
             Vector3 newPosition = CalculateMobPosition(randomAngle);
@@ -48,9 +49,9 @@ public class Spawner : MonoBehaviour
             newMob.transform.LookAt(playerPosition);
 
             var animator = newMob.GetComponent<Animator>();
-            animator.SetBool("Walk", false);
-            animator.SetBool("SprintJump", false);
-            animator.SetBool("SprintSlide", false);
+            // animator.SetBool("Walk", false);
+            // animator.SetBool("SprintJump", false);
+            // animator.SetBool("SprintSlide", false);
         }
     }
 

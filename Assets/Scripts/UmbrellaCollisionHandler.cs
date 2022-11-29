@@ -19,7 +19,6 @@ public class UmbrellaCollisionHandler : MonoBehaviour
     
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("hukko");
         if (collision.gameObject.tag == "Bullet")
         {
             if (!isFolded)
