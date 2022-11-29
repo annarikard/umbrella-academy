@@ -9,12 +9,12 @@ public class BanditShooting : MonoBehaviour
     public GameObject bullet;
     private float timeElapsed;
     public float speed;
+    public float shottingCooldown;
     private Vector3 playerPosition;
     void Start()
     {
         _animator = gameObject.GetComponent<Animator>();
         timeElapsed = 0;
-        speed = 0.8f;
         playerPosition = GameObject.Find("Character").transform.position;
     }
 
@@ -22,7 +22,7 @@ public class BanditShooting : MonoBehaviour
     void Update()
     {
         timeElapsed += Time.deltaTime;
-        if (timeElapsed >= 3)
+        if (timeElapsed >= shottingCooldown)
         {
             UnityEngine.Quaternion newRotation = UnityEngine.Quaternion.identity;
             //newRotation.Set(transform.rotation.x, transform.rotation.y, transform.rotation.y, newRotation.w);
