@@ -60,7 +60,7 @@ public class Spawner : MonoBehaviour
             // This is not implemented
             return new Vector3(10, 10, 10);
         } else {
-            return new Vector3(distance * Mathf.Cos(angle) + playerPosition.x, playerPosition.y - 1, distance * Mathf.Sin(angle) + playerPosition.z);
+            return new Vector3(distance * Mathf.Cos(angle) + playerPosition.x, playerPosition.y, distance * Mathf.Sin(angle) + playerPosition.z);
         }
 
     }
