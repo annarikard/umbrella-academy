@@ -22,7 +22,7 @@ public class PlayerCollision : MonoBehaviour
         Debug.Log("i am hurt");
         if (collision.gameObject.tag == "Bullet")
         {
-            //SceneManager.LoadScene("death");
+            SceneManager.LoadScene("death");
         }
     }
 }
