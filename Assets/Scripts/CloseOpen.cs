@@ -15,24 +15,31 @@ public class CloseOpen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        // Check if the screen is being touched
+        if (Input.touchCount > 0)
         {
+            // Get the first touch
+            Touch touch = Input.GetTouch(0);
 
-            UmbrellaCollisionHandler umbrellaCollisionHandler = (UmbrellaCollisionHandler) GetComponent("UmbrellaCollisionHandler");
-            if(i % 2 == 0)
+            // If the touch just started, open or close the umbrella
+            if (touch.phase == TouchPhase.Began)
             {
-                if (_animator != null)
+                UmbrellaCollisionHandler umbrellaCollisionHandler = (UmbrellaCollisionHandler)GetComponent("UmbrellaCollisionHandler");
+                if (i % 2 == 0)
                 {
-                    _animator.SetTrigger("Fold");
-                    umbrellaCollisionHandler.isFolded = true;
+                    if (_animator != null)
+                    {
+                        _animator.SetTrigger("Fold");
+                        umbrellaCollisionHandler.isFolded = true;
+                    }
                 }
+                else
+                {
+                    _animator.SetTrigger("Unfold");
+                    umbrellaCollisionHandler.isFolded = false;
+                }
+                i++;
             }
-            else
-            {
-                _animator.SetTrigger("Unfold");
-                umbrellaCollisionHandler.isFolded = false;
-            }
-            i++;
         }
     }
 }
