@@ -539,7 +539,7 @@ MonoBehaviour:
   mob: {fileID: 5055320135424651843, guid: 15a86e6e1b87b8c4483fca4038a1078c, type: 3}
   distance: 10
   timeInterval: 5
-  maxEnemies: 1
+  maxEnemies: 10
 --- !u!114 &1105533536
 MonoBehaviour:
   m_ObjectHideFlags: 0

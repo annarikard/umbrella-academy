@@ -48,20 +48,31 @@ public class Spawner : MonoBehaviour
         {
             var planes = planeManager.trackables;
 
-            Debug.Log("Hello");
-            Debug.Log(planes);
+            int rand = Random.Range(0, planes.count - 1);
+            int i = 0;
+
+            ARPlane randPlane = null;
+
             foreach (ARPlane plane in planes)
             {
+                if (i == rand)
+                {
+                    randPlane = plane;
+                }
+
                 Debug.Log("Detected plane: " + plane.name);
+
+                i++;
             }
 
-            float randomAngle = Random.Range(0f, 2f * Mathf.PI);
-            Vector3 newPosition = CalculateMobPosition(randomAngle);
+            if(randPlane != null)
+            {
+                GameObject newMob = Instantiate(mob, randPlane.center, Quaternion.identity);
+                newMob.transform.LookAt(playerPosition);
 
-            GameObject newMob = Instantiate(mob, newPosition, Quaternion.identity);
-            newMob.transform.LookAt(playerPosition);
-
-            var animator = newMob.GetComponent<Animator>();
+                var animator = newMob.GetComponent<Animator>();
+            }
+            
             // animator.SetBool("Walk", false);
             // animator.SetBool("SprintJump", false);
             // animator.SetBool("SprintSlide", false);
