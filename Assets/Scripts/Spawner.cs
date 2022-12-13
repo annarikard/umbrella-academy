@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.XR.ARFoundation;
 
 public class Spawner : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Spawner : MonoBehaviour
     public float timeInterval;
     public int maxEnemies;
 
+    private ARPlaneManager planeManager;
     private float timeRemaining;
     private Vector3 playerPosition;
 
@@ -19,6 +21,8 @@ public class Spawner : MonoBehaviour
     {
         timeRemaining = timeInterval;
         playerPosition = GameObject.Find("Character").transform.position;
+
+        planeManager = GetComponent<ARPlaneManager>();
 
         Spawn();
 
@@ -42,6 +46,15 @@ public class Spawner : MonoBehaviour
 
         if(enemies.Length < maxEnemies)
         {
+            var planes = planeManager.trackables;
+
+            Debug.Log("Hello");
+            Debug.Log(planes);
+            foreach (ARPlane plane in planes)
+            {
+                Debug.Log("Detected plane: " + plane.name);
+            }
+
             float randomAngle = Random.Range(0f, 2f * Mathf.PI);
             Vector3 newPosition = CalculateMobPosition(randomAngle);
 
@@ -61,8 +74,7 @@ public class Spawner : MonoBehaviour
             // This is not implemented
             return new Vector3(10, 10, 10);
         } else {
-            return new Vector3(distance * Mathf.Cos(angle) + playerPosition.x, playerPosition.y + 2, distance * Mathf.Sin(angle) + playerPosition.z);
+            return new Vector3(distance * Mathf.Cos(angle) + playerPosition.x, playerPosition.y, distance * Mathf.Sin(angle) + playerPosition.z);
         }
-
     }
 }
