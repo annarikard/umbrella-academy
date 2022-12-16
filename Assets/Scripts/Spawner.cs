@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
     public float distance;
     public float timeInterval;
     public int maxEnemies;
-
+	private ARAnchorManager anchorManager;
     private ARPlaneManager planeManager;
     private float timeRemaining;
     private Vector3 playerPosition;
@@ -23,6 +23,7 @@ public class Spawner : MonoBehaviour
         playerPosition = GameObject.Find("Character").transform.position;
 
         planeManager = GetComponent<ARPlaneManager>();
+		anchorManager = GetComponent<ARAnchorManager>();
 
         Spawn();
 
@@ -68,7 +69,11 @@ public class Spawner : MonoBehaviour
             if(randPlane != null)
             {
                 GameObject newMob = Instantiate(mob, randPlane.center, Quaternion.identity);
+				
                 newMob.transform.LookAt(playerPosition);
+				
+				newMob.AddComponent<ARAnchor>();
+				anchorManager.AttachAnchor(randPlane, new Pose(newMob.transform.position, newMob.transform.rotation));
 
                 var animator = newMob.GetComponent<Animator>();
             }
