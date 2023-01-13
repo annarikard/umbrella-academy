@@ -10,7 +10,7 @@ public class BanditShooting : MonoBehaviour
     private float timeElapsed;
     public float speed;
     public float shottingCooldown;
-    private Vector3 playerPosition;
+    public GameObject playerPosition;
     private Vector3 bulletSpawnPosition;
 
 
@@ -18,7 +18,7 @@ public class BanditShooting : MonoBehaviour
     {
         _animator = gameObject.GetComponent<Animator>();
         timeElapsed = 0;
-        playerPosition = GameObject.Find("Character").transform.position;
+        playerPosition = GameObject.FindWithTag("MainCamera");
 
     }
 
@@ -36,7 +36,8 @@ public class BanditShooting : MonoBehaviour
 
             Debug.Log(bulletSpawnPosition);
             var newMob = Instantiate(bullet, bulletSpawnPosition, newRotation);
-            newMob.transform.LookAt(playerPosition);
+            this.transform.LookAt(playerPosition.transform);
+            newMob.transform.LookAt(playerPosition.transform);
             newMob.transform.Rotate(new Vector3(90, 0, 0));
 
             gameObject.GetComponent<Animator>().SetTrigger("Attack");
