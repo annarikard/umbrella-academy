@@ -14,13 +14,13 @@ public class Spawner : MonoBehaviour
 	private ARAnchorManager anchorManager;
     private ARPlaneManager planeManager;
     private float timeRemaining;
-    private Vector3 playerPosition;
+    public GameObject playerPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         timeRemaining = timeInterval;
-        playerPosition = GameObject.Find("Character").transform.position;
+        playerPosition = GameObject.FindWithTag("MainCamera");
 
         planeManager = GetComponent<ARPlaneManager>();
 		anchorManager = GetComponent<ARAnchorManager>();
@@ -68,12 +68,18 @@ public class Spawner : MonoBehaviour
 
             if(randPlane != null)
             {
-                GameObject newMob = Instantiate(mob, randPlane.center, Quaternion.identity);
-				
-                newMob.transform.LookAt(playerPosition);
-				
-				newMob.AddComponent<ARAnchor>();
-				anchorManager.AttachAnchor(randPlane, new Pose(newMob.transform.position, newMob.transform.rotation));
+                //Get a random point on the plane
+                Vector3 randPointOnPlane = randPlane.center;
+
+                //Get a random position on the plane at a distance from the center
+                Vector3 randPos = randPointOnPlane + new Vector3(Random.Range(-randPlane.extents.x, randPlane.extents.x), 0, Random.Range(-randPlane.extents.y, randPlane.extents.y));
+
+                // spawn the enemy at the random position
+                GameObject newMob = Instantiate(mob, randPos, Quaternion.LookRotation(Vector3.up));
+
+                // Make the enemy face the player
+                newMob.transform.LookAt(playerPosition.transform);
+                newMob.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); // set the scale to half the original size
 
                 var animator = newMob.GetComponent<Animator>();
             }
@@ -81,16 +87,6 @@ public class Spawner : MonoBehaviour
             // animator.SetBool("Walk", false);
             // animator.SetBool("SprintJump", false);
             // animator.SetBool("SprintSlide", false);
-        }
-    }
-
-    Vector3 CalculateMobPosition(float angle, bool isSphere = false){
-
-        if (isSphere){
-            // This is not implemented
-            return new Vector3(10, 10, 10);
-        } else {
-            return new Vector3(distance * Mathf.Cos(angle) + playerPosition.x, playerPosition.y, distance * Mathf.Sin(angle) + playerPosition.z);
         }
     }
 }
