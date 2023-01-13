@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 
+// all this code is trash and unused
 public class Attack : MonoBehaviour
 {
     private Animator _animator;

@@ -53,8 +53,13 @@ public class Spawner : MonoBehaviour
         {
             var planes = planeManager.trackables;
 
+            if (planes.count < 2) {
+                return;
+            }
+
             int rand = Random.Range(0, planes.count - 1);
             int i = 0;
+
 
             ARPlane randPlane = null;
 
