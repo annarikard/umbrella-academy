@@ -450,6 +450,8 @@ MonoBehaviour:
   distance: 10
   timeInterval: 5
   maxEnemies: 2
+  cameraPosition: {fileID: 0}
+  galaxyUmbrella: {fileID: 0}
 --- !u!114 &1105533536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1160,6 +1162,8 @@ MonoBehaviour:
   distance: 10
   timeInterval: 5
   maxEnemies: 1
+  cameraPosition: {fileID: 0}
+  galaxyUmbrella: {fileID: 0}
 --- !u!114 &1984904795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,7 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1a85daccc4744bb80b960be4342fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  immortal: 1
+  immortal: 0
 --- !u!136 &1984904796
 CapsuleCollider:
   m_ObjectHideFlags: 0

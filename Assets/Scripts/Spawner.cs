@@ -14,13 +14,15 @@ public class Spawner : MonoBehaviour
 	private ARAnchorManager anchorManager;
     private ARPlaneManager planeManager;
     private float timeRemaining;
-    public GameObject playerPosition;
+    public GameObject cameraPosition;
+    public GameObject galaxyUmbrella;
 
     // Start is called before the first frame update
     void Start()
     {
         timeRemaining = timeInterval;
-        playerPosition = GameObject.FindWithTag("MainCamera");
+        cameraPosition = GameObject.FindWithTag("GalaxyUmbrella");
+        cameraPosition = GameObject.FindWithTag("MainCamera");
 
         planeManager = GetComponent<ARPlaneManager>();
 		anchorManager = GetComponent<ARAnchorManager>();
@@ -39,6 +41,8 @@ public class Spawner : MonoBehaviour
         }        
 
         timeRemaining -= Time.deltaTime;
+
+        cameraPosition.transform.SetParent(galaxyUmbrella.transform);
     }
 
     // Create a new mob in the distance and rotate towards the player
@@ -78,7 +82,7 @@ public class Spawner : MonoBehaviour
                 GameObject newMob = Instantiate(mob, randPos, Quaternion.LookRotation(Vector3.up));
 
                 // Make the enemy face the player
-                newMob.transform.LookAt(playerPosition.transform);
+                newMob.transform.LookAt(cameraPosition.transform);
                 newMob.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); // set the scale to half the original size
 
                 var animator = newMob.GetComponent<Animator>();
