@@ -452,8 +452,8 @@ MonoBehaviour:
   distance: 10
   timeInterval: 5
   maxEnemies: 2
-  cameraPosition: {fileID: 0}
-  galaxyUmbrella: {fileID: 0}
+  cameraPosition: {fileID: 1444087198}
+  galaxyUmbrella: {fileID: 230978927}
 --- !u!114 &1105533536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,7 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedLibrary: {fileID: 11400000, guid: 6084097f2d0beb947b1bf537fd5b01cf, type: 2}
-  m_MaxNumberOfMovingImages: 0
+  m_MaxNumberOfMovingImages: 5
   m_TrackedImagePrefab: {fileID: 1098467751342418010, guid: 289e50df846e06e4fbf79dcfd93074f5, type: 3}
 --- !u!1 &1145030997
 GameObject:
@@ -1153,8 +1153,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 0.5
+  m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -1168,7 +1168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984904789}
   m_LocalRotation: {x: -0.61337894, y: -0.18378064, z: -0.17260337, w: 0.7484644}
-  m_LocalPosition: {x: 0, y: 0, z: 2.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1216,11 +1216,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 1984904789}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.7514038
-  m_Height: 1.8600864
+  m_Enabled: 0
+  m_Radius: 0.1
+  m_Height: 0.5083648
   m_Direction: 1
-  m_Center: {x: 0.08733368, y: -0.6421461, z: 0.25105476}
+  m_Center: {x: -1.1749526e-10, y: -0.0041824053, z: -7.1185002e-12}
 --- !u!54 &1984904797
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1275,15 +1275,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 460250, guid: 440577244306b194bbf962a5e381a44c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 460250, guid: 440577244306b194bbf962a5e381a44c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 460250, guid: 440577244306b194bbf962a5e381a44c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.8
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 460250, guid: 440577244306b194bbf962a5e381a44c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1295,7 +1295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 460250, guid: 440577244306b194bbf962a5e381a44c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.217
+      value: 0.156
       objectReference: {fileID: 0}
     - target: {fileID: 460250, guid: 440577244306b194bbf962a5e381a44c, type: 3}
       propertyPath: m_LocalRotation.w

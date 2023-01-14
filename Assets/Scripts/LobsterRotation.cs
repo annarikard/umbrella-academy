@@ -18,6 +18,7 @@ public class LobsterRotation : MonoBehaviour
         speed = 5f;
         cam = Camera.main.transform;
         transform.rotation = cam.rotation;
+        explosion.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
     }
 
     // Update is called once per frame
