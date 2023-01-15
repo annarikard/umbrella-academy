@@ -9,8 +9,8 @@ public class LobsterRotation : MonoBehaviour
     public float speed;
 
     public GameObject explosion;
-
     private float timeElapsed;
+    private KillCount killCount;
 
     void Start()
     {
@@ -19,6 +19,7 @@ public class LobsterRotation : MonoBehaviour
         cam = Camera.main.transform;
         transform.rotation = cam.rotation;
         explosion.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+        killCount = GameObject.Find("GameManager").GetComponent<KillCount>();
     }
 
     // Update is called once per frame
@@ -38,6 +39,7 @@ public class LobsterRotation : MonoBehaviour
             {
                 Debug.Log("Hit BasicBandido!");
                 GameObject tempExplosion = Instantiate(explosion, hit.collider.transform.position, Quaternion.identity);
+                KillCount.killCount++;
                 Destroy(tempExplosion, 4f);
                 Destroy(hit.collider.gameObject);
                 Destroy(this.gameObject);

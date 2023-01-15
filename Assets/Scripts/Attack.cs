@@ -64,9 +64,7 @@ public class Attack : MonoBehaviour
     }
 
 	public static bool IsDoubleTap(){
-         bool result = false;
-         float MaxTimeWait = 3;
-         float VariancePosition = 3;
+        bool result = false;
 		float tapCount = 0;
 		float touchTime = 0;
 		float touchEndTime = 0;

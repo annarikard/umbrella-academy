@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 276498515}
   - component: {fileID: 276498517}
   - component: {fileID: 276498516}
+  - component: {fileID: 276498518}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -257,7 +258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You are dead, restart
+  m_text: txt
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed4e3040e35ed41bd92a2584e60592be, type: 2}
   m_sharedMaterial: {fileID: 6750394318344321421, guid: ed4e3040e35ed41bd92a2584e60592be, type: 2}
@@ -334,6 +335,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276498514}
   m_CullTransparentMesh: 1
+--- !u!114 &276498518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276498514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc890130810364197a11e203036197eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 276498514}
 --- !u!1 &901310757
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d426a0c19bdb4cc7ba5397f9450d95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  txt: {fileID: 0}
 --- !u!1 &931370984
 GameObject:
   m_ObjectHideFlags: 0
