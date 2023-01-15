@@ -13,12 +13,16 @@ public class BanditShooting : MonoBehaviour
     public GameObject playerPosition;
     private Vector3 bulletSpawnPosition;
 
+    public GameObject DEBUG_character_position;
+
 
     void Start()
     {
         _animator = gameObject.GetComponent<Animator>();
         timeElapsed = 0;
         playerPosition = GameObject.FindWithTag("MainCamera");
+        DEBUG_character_position = GameObject.FindWithTag("Character");
+
 
     }
 
@@ -28,6 +32,7 @@ public class BanditShooting : MonoBehaviour
         timeElapsed += Time.deltaTime;
         if (timeElapsed >= shottingCooldown)
         {
+            Debug.Log("UMBRELLA_DEBUG: Debug character position: " + DEBUG_character_position.transform.position + " camera position: " + playerPosition.transform.position);
             bulletSpawnPosition = transform.Find("ProjectileSpawner").position;
 
 
