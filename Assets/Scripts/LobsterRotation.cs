@@ -15,7 +15,7 @@ public class LobsterRotation : MonoBehaviour
     void Start()
     {
         timeElapsed = 0;
-        speed = 5f;
+        speed = 2.5f;
         cam = Camera.main.transform;
         transform.rotation = cam.rotation;
         explosion.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);

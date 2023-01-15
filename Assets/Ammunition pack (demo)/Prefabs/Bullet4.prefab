@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269dcbb5a03224c80af5461c24ad0424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 1
   lifetime: 20
 --- !u!136 &6717284493955713992
 CapsuleCollider:
@@ -199,10 +199,10 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 6fbd7b3b0fcd2436eb947a9af2ff610f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.09570842
-  m_Height: 0.6233512
+  m_Radius: 0.06
+  m_Height: 0.31
   m_Direction: 1
-  m_Center: {x: 4.5791194e-16, y: 0.28222263, z: 0.0056830794}
+  m_Center: {x: 0, y: 0.28222263, z: 0}
 --- !u!54 &4599392542071414248
 Rigidbody:
   m_ObjectHideFlags: 0

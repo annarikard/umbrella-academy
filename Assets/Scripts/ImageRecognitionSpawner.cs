@@ -7,6 +7,8 @@ using UnityEngine.XR.ARFoundation;
 public class ImageRecognitionSpawner : MonoBehaviour
 {
 
+    public PowerupManager powerupManager;
+
     [SerializeField] ARTrackedImageManager m_TrackedImageManager;
 
     void Awake(){
@@ -31,11 +33,13 @@ public class ImageRecognitionSpawner : MonoBehaviour
 {
     foreach (var newImage in eventArgs.added)
     {
-        Debug.Log(newImage.name);
+        Debug.Log("UMBRELLA_DEBUG: newImage");
+        powerupManager.enableSlowDown();
     }
 
     foreach (var updatedImage in eventArgs.updated)
     {
+        Debug.Log("UMBRELLA_DEBUG: updatedImage");
         // Handle updated event
     }
 

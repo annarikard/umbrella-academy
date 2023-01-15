@@ -88,10 +88,6 @@ public class Spawner : MonoBehaviour
 
                 var animator = newMob.GetComponent<Animator>();
             }
-            
-            // animator.SetBool("Walk", false);
-            // animator.SetBool("SprintJump", false);
-            // animator.SetBool("SprintSlide", false);
         }
     }
 }
